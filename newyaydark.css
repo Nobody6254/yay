@@ -237,15 +237,15 @@ h1, h2, h3, h4, h5 {
 
 #middle {
 	display: grid;
-	grid-template-columns: 285px 1fr;
+	grid-template-columns: 215px 1fr;
 	column-gap: 25px;
 	width: 100vw;
 	margin: 0 auto;
-	padding: 35px;
+	padding: 27px;
 }
 
 #left-column {
-	width: 285px;
+	width: 215px;
 }
 
 #jumpdown {
