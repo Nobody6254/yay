@@ -50,7 +50,7 @@
 	--color-surface-faint: #505050;
 	--color-surface-warm: #fef6ea;
 	--color-surface-worth: #faf6df;
-	--color-surface-neutral: #eeeeee;
+	--color-surface-neutral: transparent;
 
 	/* â”€â”€ Slop Detection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 	--color-slop-high: rgba(255, 182, 193, 0.35);
@@ -4013,7 +4013,7 @@ div.error {
 	}
 
 	#mobile-menu-btn {
-		display: block;
+		display: inline-block;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -4039,7 +4039,7 @@ div.error {
 		font-weight: bold;
 		text-transform: uppercase;
 		cursor: pointer;
-		padding: 4px 8px;
+		padding: 4px 0;
 	}
 
 	#mod-tab {
@@ -4115,6 +4115,7 @@ div.error {
 		padding: 12px 14px;
 		border: 0;
 		border-bottom: 1px solid var(--color-border-separator);
+		position: relative;
 	}
 
 	.pagination .paging-text {
@@ -4227,10 +4228,10 @@ div.error {
 	#photostream,
 	#comment-form>p,
 	#toggle-html,
-	#preferences,
+	/* #preferences, */
 	#thread-categories,
-	.welcome>a,
-	.welcome h4,
+	/* .welcome>a,
+	.welcome h4, */
 	div.five,
 	div.category,
 	#thread-headers,
@@ -4240,6 +4241,12 @@ div.error {
 	#pobf,
 	#left-column .everythingpic {
 		display: none;
+	}
+	
+	.welcome>a,
+	.welcome h4,
+	#preferences {
+		display: block !important;
 	}
 
 	/* Collapsible mobile nav - hidden by default */
@@ -4258,8 +4265,18 @@ div.error {
 	#left-column.nav-open #mod-menu,
 	#left-column.nav-open #buddy-list,
 	#left-column.nav-open #messaging,
+	#left-column.nav-open .lc-node.welcome,
 	#left-column.nav-open #search-title {
 		display: block;
+	}
+	
+	.welcome {
+		position: relative;
+		width: 100%;
+		padding: 0 15px 1rem 15px;
+		right: unset;
+		left: unset;
+		top: unset;
 	}
 
 	#left-column.nav-open #theme-toggle {
@@ -4440,7 +4457,7 @@ div.error {
 		display: block;
 		margin-bottom: 10px;
 	}
-
+/*
 	.welcome {
 		position: absolute;
 		top: 6px;
@@ -4449,6 +4466,12 @@ div.error {
 		padding: 0;
 		border: 0;
 	}
+*/
+/*
+	.welcome {
+		position: relative !important;
+	{
+*/
 
 	#jumpdown {
 		position: absolute;
@@ -4743,7 +4766,8 @@ div.error {
 	}
 
 	#main-title {
-		display: none;
+		display: block;
+		padding: 0 15px;
 	}
 
 	#thread #main-title {
@@ -6021,7 +6045,7 @@ div.error {
 
 @media screen and (max-width: 768px) {
 	#chatroom {
-		height: calc(100vh - 60px);
+		height: calc(100vh - 250px);
 	}
 
 	.chat-avatar {
