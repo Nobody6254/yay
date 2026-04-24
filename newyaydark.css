@@ -1895,6 +1895,7 @@ pre code.hljs {
 	position: relative;
 	top: -2px;
 	left: -2px;
+	background-color: transparent;
 }
 
 #thread .comment button {
