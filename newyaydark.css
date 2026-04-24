@@ -1264,7 +1264,8 @@ a.favourite.added:hover {
 .content-block .content {
 	font-size: 1rem;
 }
-.content-block .content br {
+.content-block .content p + br,
+.content-block .content blockquote + br {
 	display: none;
 }
 
